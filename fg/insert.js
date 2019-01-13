@@ -4,7 +4,7 @@
 	case "insert":
 	    const elem = document.createElement(msg.options.elemName)
 	    elem.textContent = msg.text
-	    document.querySelector(msg.options.containerSelector).appendChild(elem)
+	    document.querySelector(msg.options.containerSelector).prepend(elem)
 	    break
 	case "uninject":
 	    chrome.runtime.onMessage.removeListener(processMessage)
